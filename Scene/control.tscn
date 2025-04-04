@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtfusshwugvuf"]
+
+[ext_resource type="Script" path="res://Script/control.gd" id="1_q8hvo"]
+[ext_resource type="Texture2D" uid="uid://lw45sbv575u" path="res://background/tilesetOpenGameBackground.png" id="2_x7fa6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dx5ux"]
+texture = ExtResource("2_x7fa6")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q8hvo")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 2.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_dx5ux")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 234.0
+offset_right = 480.0
+offset_bottom = 300.0
+scale = Vector2(2.91608, 3.00767)
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start Game"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Exit
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 317.0
+offset_top = 71.0
+offset_right = 737.0
+offset_bottom = 162.0
+scale = Vector2(1.13555, 1.14817)
+theme_override_font_sizes/font_size = 66
+text = "Eve of dusk"
+
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
