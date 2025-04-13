@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://86qxu8yu32st"]
+[gd_scene load_steps=44 format=3 uid="uid://diuv1tlp1d2ni"]
 
 [ext_resource type="Texture2D" uid="uid://b6366u3ncj5r5" path="res://Sprites/kitsune/Dead.png" id="1_drunw"]
 [ext_resource type="Script" path="res://Script/kitsune.gd" id="1_scf6r"]

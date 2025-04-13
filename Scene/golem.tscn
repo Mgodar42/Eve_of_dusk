@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bbrsaldm3kjac" path="res://Sprites/golem/hit_5.png" id="6_62882"]
 [ext_resource type="Texture2D" uid="uid://od23wpn7kq8v" path="res://Sprites/golem/idle_6.png" id="6_dvwkn"]
 [ext_resource type="Texture2D" uid="uid://cddpix2rbscww" path="res://Sprites/golem/hit_6.png" id="7_ytih5"]
-[ext_resource type="PackedScene" path="res://Scene/killzone.tscn" id="8_v8wr0"]
+[ext_resource type="PackedScene" uid="uid://c8yhdq6j24jm2" path="res://Scene/killzone.tscn" id="8_v8wr0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o44wk"]
 animations = [{

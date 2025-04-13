@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=4 uid="uid://bppeqmji8sn1f"]
+[gd_scene load_steps=7 format=4 uid="uid://cbs7cf8txkw47"]
 
 [ext_resource type="Texture2D" uid="uid://b4qnu5dl5e1ml" path="res://tiles/Nature_environment_01.png" id="1_wo578"]
-[ext_resource type="PackedScene" uid="uid://86qxu8yu32st" path="res://Scene/kitsune.tscn" id="2_d5c0m"]
+[ext_resource type="PackedScene" path="res://Scene/kitsune.tscn" id="2_d5c0m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bxywu"]
 texture = ExtResource("1_wo578")
