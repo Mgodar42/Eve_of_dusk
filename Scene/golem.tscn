@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ctblaipr8xlya"]
+[gd_scene load_steps=16 format=3 uid="uid://ctblaipr8xlya"]
 
 [ext_resource type="Texture2D" uid="uid://cys03i8ln5r17" path="res://Sprites/golem/idle_1.png" id="1_oku7s"]
 [ext_resource type="Script" path="res://Script/golem.gd" id="1_p8gu5"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://bbrsaldm3kjac" path="res://Sprites/golem/hit_5.png" id="6_62882"]
 [ext_resource type="Texture2D" uid="uid://od23wpn7kq8v" path="res://Sprites/golem/idle_6.png" id="6_dvwkn"]
 [ext_resource type="Texture2D" uid="uid://cddpix2rbscww" path="res://Sprites/golem/hit_6.png" id="7_ytih5"]
-[ext_resource type="PackedScene" uid="uid://c8yhdq6j24jm2" path="res://Scene/killzone.tscn" id="8_v8wr0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o44wk"]
 animations = [{
@@ -64,9 +63,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_gwrf6"]
-radius = 125.256
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yxwy6"]
 size = Vector2(191, 347)
 
@@ -81,22 +77,16 @@ autoplay = "attack"
 frame = 4
 frame_progress = 0.915749
 
-[node name="killzone" parent="AnimatedSprite2D" instance=ExtResource("8_v8wr0")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/killzone"]
-position = Vector2(-113, 16)
-shape = SubResource("CircleShape2D_gwrf6")
-
 [node name="RayCastright" type="RayCast2D" parent="."]
 target_position = Vector2(144, 0)
 
 [node name="RayCastleft" type="RayCast2D" parent="."]
 target_position = Vector2(-231, 0)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="collision" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="collision"]
 position = Vector2(58.5, 11.5)
 shape = SubResource("RectangleShape2D_yxwy6")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="collision" to="." method="_on_area_2d_body_entered"]

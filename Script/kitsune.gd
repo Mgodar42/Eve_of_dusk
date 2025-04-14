@@ -5,7 +5,7 @@ class_name player
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -500.0
+const JUMP_VELOCITY = -450.0
 
 func jump():
 	velocity.y = JUMP_VELOCITY

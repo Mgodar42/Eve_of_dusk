@@ -10,6 +10,7 @@ var direction =1
 @onready var ray_castleft: RayCast2D = $RayCastleft
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var area_2d: Area2D = $Area2D
+@onready var kitsune: player = $"../kitsune"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -24,7 +25,10 @@ func _process(delta: float) -> void:
 	
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if (body.name == "CharacterBody2D"):
+func _on_area_2d_body_entered(body):
+	if (body.name == "kitsune"):
 		var y_delta = position.y - body.position.y
-		print (y_delta) # Replace with function body.
+		if (y_delta> 30):
+			queue_free()
+		else: 
+			get_tree().reload_current_scene()
