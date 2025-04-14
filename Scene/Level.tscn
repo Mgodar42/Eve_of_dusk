@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://cbs7cf8txkw47"]
+[gd_scene load_steps=17 format=4 uid="uid://cbs7cf8txkw47"]
 
 [ext_resource type="Texture2D" uid="uid://b4qnu5dl5e1ml" path="res://tiles/Nature_environment_01.png" id="1_wo578"]
 [ext_resource type="PackedScene" uid="uid://diuv1tlp1d2ni" path="res://Scene/kitsune.tscn" id="2_d5c0m"]
@@ -336,6 +336,44 @@ _data = {
 "move": SubResource("Animation_ljr7t")
 }
 
+[sub_resource type="Animation" id="Animation_dxgpi"]
+resource_name = "move"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1788, 312), Vector2(2114, 312)]
+}
+
+[sub_resource type="Animation" id="Animation_8u7id"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1788, 312)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w4si6"]
+_data = {
+"RESET": SubResource("Animation_8u7id"),
+"move": SubResource("Animation_dxgpi")
+}
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
@@ -384,5 +422,14 @@ position = Vector2(1535, 312)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="platform3"]
 libraries = {
 "": SubResource("AnimationLibrary_w8kjp")
+}
+autoplay = "move"
+
+[node name="platform4" parent="." instance=ExtResource("3_c51ea")]
+position = Vector2(1788, 312)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="platform4"]
+libraries = {
+"": SubResource("AnimationLibrary_w4si6")
 }
 autoplay = "move"
