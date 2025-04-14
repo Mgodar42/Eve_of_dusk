@@ -25,4 +25,10 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	if body.name == "CharacterBody2D":
+		var y_delta = position.y - body.position.y
+		if(y_delta > 30 ):
+			queue_free()
+			body.jump()
+			
+		# Replace with function body.
