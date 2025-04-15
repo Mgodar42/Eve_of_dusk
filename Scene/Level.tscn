@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b4qnu5dl5e1ml" path="res://tiles/Nature_environment_01.png" id="1_wo578"]
 [ext_resource type="PackedScene" uid="uid://diuv1tlp1d2ni" path="res://Scene/kitsune.tscn" id="2_d5c0m"]
-[ext_resource type="PackedScene" uid="uid://b8iv6k4pr163t" path="res://Scene/platform.tscn" id="3_c51ea"]
+[ext_resource type="PackedScene" path="res://Scene/platform.tscn" id="3_c51ea"]
 [ext_resource type="PackedScene" uid="uid://ctblaipr8xlya" path="res://Scene/golem.tscn" id="4_bagg5"]
 [ext_resource type="PackedScene" uid="uid://c8yhdq6j24jm2" path="res://Scene/killzone.tscn" id="4_bhduy"]
 
@@ -44,10 +44,10 @@ texture = ExtResource("1_wo578")
 10:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 23.625, -23.6875, 24, 24, 0, 0)
 1:7/size_in_atlas = Vector2i(3, 3)
 1:7/0 = 0
-1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 23.625, -23.6875, 24, 24, -24, 24)
+1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 4:7/size_in_atlas = Vector2i(3, 3)
 4:7/0 = 0
-4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 23.625, -23.6875, 24, 24, -24, 24)
+4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 7:7/size_in_atlas = Vector2i(3, 3)
 7:7/0 = 0
 7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 23.625, -23.6875, 24, 24, -24, 24)
@@ -77,10 +77,10 @@ texture = ExtResource("1_wo578")
 22:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 23.625, -23.6875, 24, 24, -24, 24)
 1:10/size_in_atlas = Vector2i(3, 3)
 1:10/0 = 0
-1:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 23.625, -23.6875, 24, 24, -24, 24)
+1:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 4:10/size_in_atlas = Vector2i(3, 3)
 4:10/0 = 0
-4:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 23.625, -23.6875, 24, 24, -24, 24)
+4:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 7:10/size_in_atlas = Vector2i(3, 3)
 7:10/0 = 0
 7:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 23.625, -23.6875, 24, 24, -24, 24)
@@ -166,10 +166,10 @@ texture = ExtResource("1_wo578")
 8:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:13/size_in_atlas = Vector2i(3, 3)
 1:13/0 = 0
-1:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 23.625, -23.6875, 24, 24, -24, 24)
+1:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 4:13/size_in_atlas = Vector2i(3, 3)
 4:13/0 = 0
-4:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 23.625, -23.6875, 24, 24, -24, 24)
+4:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 7:13/size_in_atlas = Vector2i(3, 3)
 7:13/0 = 0
 7:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 23.625, -23.6875, 24, 24, -24, 24)
@@ -178,13 +178,13 @@ texture = ExtResource("1_wo578")
 10:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 23.625, -23.6875, 24, 24, -24, 24)
 1:16/size_in_atlas = Vector2i(3, 3)
 1:16/0 = 0
-1:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 23.625, -23.6875, 24, 24, -24, 24)
+1:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 4:16/size_in_atlas = Vector2i(3, 3)
 4:16/0 = 0
-4:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 23.625, -23.6875, 24, 24, -24, 24)
+4:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 1:19/size_in_atlas = Vector2i(3, 3)
 1:19/0 = 0
-1:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 23.625, -23.6875, 24, 24, -24, 24)
+1:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 24, -24, 24, 24, -24, 24)
 4:19/size_in_atlas = Vector2i(3, 3)
 4:19/0 = 0
 4:19/0/physics_layer_0/polygon_0/points = PackedVector2Array(-24, -24, 23.625, -23.6875, 24, 24, -24, 24)
@@ -376,6 +376,21 @@ _data = {
 "move": SubResource("Animation_dxgpi")
 }
 
+[sub_resource type="Animation" id="Animation_sqt3y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1843, 312)]
+}
+
 [sub_resource type="Animation" id="Animation_6xm63"]
 resource_name = "move"
 length = 1.75
@@ -393,7 +408,13 @@ tracks/0/keys = {
 "values": [Vector2(1843, 312), Vector2(2153, 312)]
 }
 
-[sub_resource type="Animation" id="Animation_sqt3y"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cwjhx"]
+_data = {
+"RESET": SubResource("Animation_sqt3y"),
+"move": SubResource("Animation_6xm63")
+}
+
+[sub_resource type="Animation" id="Animation_rg5em"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -405,13 +426,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1843, 312)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_cwjhx"]
-_data = {
-"RESET": SubResource("Animation_sqt3y"),
-"move": SubResource("Animation_6xm63")
+"values": [Vector2(2278, 222)]
 }
 
 [sub_resource type="Animation" id="Animation_8wpyh"]
@@ -431,7 +446,13 @@ tracks/0/keys = {
 "values": [Vector2(2278, 222), Vector2(2113, 222)]
 }
 
-[sub_resource type="Animation" id="Animation_rg5em"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2io3o"]
+_data = {
+"RESET": SubResource("Animation_rg5em"),
+"move": SubResource("Animation_8wpyh")
+}
+
+[sub_resource type="Animation" id="Animation_s7pin"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -443,13 +464,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(2278, 222)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_2io3o"]
-_data = {
-"RESET": SubResource("Animation_rg5em"),
-"move": SubResource("Animation_8wpyh")
+"values": [Vector2(2289, 115)]
 }
 
 [sub_resource type="Animation" id="Animation_6okk6"]
@@ -469,21 +484,6 @@ tracks/0/keys = {
 "values": [Vector2(2289, 115), Vector2(2161, 115)]
 }
 
-[sub_resource type="Animation" id="Animation_s7pin"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2289, 115)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gc7jo"]
 _data = {
 "RESET": SubResource("Animation_s7pin"),
@@ -501,7 +501,7 @@ tile_map_data = PackedByteArray("AADT/zUAAAArAAcAAADW/zUAAAArAAcAAADZ/zUAAAArAAc
 tile_set = SubResource("TileSet_ugcgk")
 
 [node name="kitsune" parent="." instance=ExtResource("2_d5c0m")]
-position = Vector2(-158, 490)
+position = Vector2(-153, 480)
 scale = Vector2(0.60808, 0.542571)
 
 [node name="Camera2D" type="Camera2D" parent="kitsune"]
@@ -510,7 +510,8 @@ limit_bottom = 895
 limit_smoothed = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAACACYAAAABAAcAAAAFACYAAAABAAcAAAAIACYAAAABAAcAAAALACYAAAABAAcAAAAOACYAAAABAAcAAAAVACEAAAAZABUAAAAdAB8AAAAZABUAAAAmABwAAAAQAAcAAAAjABwAAAANAAQAAAAjABkAAAANAAEAAAAmABkAAAAQAAEAAAAvABwAAAAEAAoAAAAyABwAAAAKAAoAAAA1ABwAAAANAAoAAAA9ABQAAAAlABQAAACiAAUAAAAZAAcAAAC0AAUAAAAZAAcAAACiAPv/AAAZAAEAAAC0APv/AAAZAAEAAAC0APX/AAAZAAcAAACiAPX/AAAZAAcAAACiAOX/AAAZAAcAAACiAOv/AAAZAAEAAAC0AOX/AAAZAAcAAAC0AOv/AAAZAAEAAACiANv/AAAZAAEAAAC0ANv/AAAZAAEAAACaANj/AAABAA0AAACdANj/AAABAA0AAACgANj/AAABAA0AAACjANj/AAABAA0AAACmANj/AAABAA0AAACpANj/AAABAA0AAACsANj/AAABAA0AAACvANj/AAABAA0AAACyANj/AAABAA0AAAC1ANj/AAABAA0AAAC4ANj/AAABAA0AAAC7ANj/AAABAA0AAAApABkAAAATAAEAAAAsABkAAAAWAAEAAAAsABwAAAAWAAQAAAApABwAAAAHAAcAAAD2/yQAAAAWAA0AAADrAAAAAAAcABUAAADzAAAAAAAcABUAAAD7AAAAAAAcABUAAAADAQAAAAAcABUAAAALAQAAAAAcABUAAADoAPz/AAA6AAoAAAAQAfz/AAA6AAoAAADDAAUAAAAZABUAAADJAPv/AAAZABUAAACTAPX/AAAZABUAAACOAOz/AAAZABUAAADBAOX/AAAZABUAAADHANz/AAAZABUAAAA=")
+position = Vector2(-1, 0)
+tile_map_data = PackedByteArray("AAACACYAAAABAAcAAAAFACYAAAABAAcAAAAIACYAAAABAAcAAAALACYAAAABAAcAAAAOACYAAAABAAcAAAAVACEAAAAZABUAAAAdAB8AAAAZABUAAAA9ABQAAAAlABQAAACiAAUAAAAZAAcAAAC0AAUAAAAZAAcAAAD2/yQAAAAWAA0AAADrAAAAAAAcABUAAADzAAAAAAAcABUAAAD7AAAAAAAcABUAAAADAQAAAAAcABUAAAALAQAAAAAcABUAAADoAPz/AAA6AAoAAAAQAfz/AAA6AAoAAADDAAUAAAAZABUAAAAjABgAAAANAAEAAAAjABsAAAANAAQAAAAmABgAAAAQAAEAAAAmABsAAAAQAAcAAAApABgAAAATAAEAAAApABsAAAAHAAcAAAAsABgAAAAWAAEAAAAsABsAAAAWAAQAAAAvABsAAAAEAAoAAAAyABsAAAAKAAoAAAA1ABsAAAANAAoAAACiAPf/AAAZAAcAAACiAP3/AAAZAAEAAAC0APf/AAAZAAcAAAC0AP3/AAAZAAEAAACiAOn/AAAZAAcAAACiAO//AAAZAAEAAAC0AOn/AAAZAAcAAAC0AO//AAAZAAEAAACaAN3/AAABAA0AAACdAN3/AAABAA0AAACgAN3/AAABAA0AAACiAOD/AAAZAAEAAACjAN3/AAABAA0AAACmAN3/AAABAA0AAACpAN3/AAABAA0AAACsAN3/AAABAA0AAACvAN3/AAABAA0AAACyAN3/AAABAA0AAAC0AOD/AAAZAAEAAAC1AN3/AAABAA0AAAC4AN3/AAABAA0AAAC7AN3/AAABAA0AAADDAP//AAAZABUAAADDAPn/AAAZABUAAACUAPf/AAAZABUAAACUAPH/AAAZABUAAACUAOv/AAAZABUAAADBAOn/AAAZABUAAADBAOP/AAAZABUAAADBAN3/AAAZABUAAAA=")
 tile_set = SubResource("TileSet_x4xoa")
 
 [node name="moving tiles" type="Node" parent="."]
