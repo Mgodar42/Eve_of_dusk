@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu313qmtg3c1o"]
+
+[ext_resource type="Texture2D" uid="uid://cijudhyaomago" path="res://background/Ocean.png" id="1_xsvxy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wd5la"]
+texture = ExtResource("1_xsvxy")
+
+[node name="End panel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_wd5la")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 219.0
+offset_top = -1.0
+offset_right = 1057.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 114
+text = "Thank You"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 827.0
+offset_top = 580.0
+offset_right = 1136.0
+offset_bottom = 638.0
+theme_override_font_sizes/font_size = 42
+text = "Mohan Godar"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 573.0
+offset_right = 273.0
+offset_bottom = 632.0
+theme_override_font_sizes/font_size = 42
+text = "Bivek Chuwain"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 574.0
+offset_right = 718.0
+offset_bottom = 632.0
+theme_override_font_sizes/font_size = 42
+text = "Sachin Shrestha"

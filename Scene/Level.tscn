@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b4qnu5dl5e1ml" path="res://tiles/Nature_environment_01.png" id="1_wo578"]
 [ext_resource type="PackedScene" uid="uid://diuv1tlp1d2ni" path="res://Scene/kitsune.tscn" id="2_d5c0m"]
-[ext_resource type="PackedScene" uid="uid://b8iv6k4pr163t" path="res://Scene/platform.tscn" id="3_c51ea"]
+[ext_resource type="PackedScene" path="res://Scene/platform.tscn" id="3_c51ea"]
 [ext_resource type="PackedScene" uid="uid://ctblaipr8xlya" path="res://Scene/golem.tscn" id="4_bagg5"]
 [ext_resource type="PackedScene" uid="uid://c8yhdq6j24jm2" path="res://Scene/killzone.tscn" id="4_bhduy"]
 
