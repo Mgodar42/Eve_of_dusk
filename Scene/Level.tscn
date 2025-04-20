@@ -1,11 +1,14 @@
-[gd_scene load_steps=31 format=4 uid="uid://cbs7cf8txkw47"]
+[gd_scene load_steps=43 format=4 uid="uid://cbs7cf8txkw47"]
 
+[ext_resource type="Script" path="res://Script/level.gd" id="1_pdssv"]
 [ext_resource type="Texture2D" uid="uid://b4qnu5dl5e1ml" path="res://tiles/Nature_environment_01.png" id="1_wo578"]
 [ext_resource type="PackedScene" uid="uid://diuv1tlp1d2ni" path="res://Scene/kitsune.tscn" id="2_d5c0m"]
 [ext_resource type="PackedScene" uid="uid://b8iv6k4pr163t" path="res://Scene/platform.tscn" id="3_c51ea"]
 [ext_resource type="PackedScene" uid="uid://ctblaipr8xlya" path="res://Scene/golem.tscn" id="4_bagg5"]
 [ext_resource type="PackedScene" uid="uid://c8yhdq6j24jm2" path="res://Scene/killzone.tscn" id="4_bhduy"]
 [ext_resource type="PackedScene" uid="uid://mmfoo5rqa7uf" path="res://Scene/path_2d.tscn" id="6_4q73y"]
+[ext_resource type="Texture2D" uid="uid://c5ihktva8jfsk" path="res://Sprites/Dimensional_Portal.png" id="7_ia5vv"]
+[ext_resource type="FontFile" uid="uid://chylhwcjt5pta" path="res://text/PixelOperator8-Bold.ttf" id="9_kbons"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bxywu"]
 texture = ExtResource("1_wo578")
@@ -500,7 +503,67 @@ _data = {
 }
 point_count = 17
 
+[sub_resource type="Curve2D" id="Curve2D_rpg4c"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 8, -2, 0, 0, 0, 0, 59, -10, 0, 0, 0, 0, 119, -12, 0, 0, 0, 0, 202, -14, 0, 0, 0, 0, 258, -21, 0, 0, 0, 0, 304, -33, 0, 0, 0, 0, 355, -50, 0, 0, 0, 0, 409, -68, 0, 0, 0, 0, 464, -85, 0, 0, 0, 0, 536, -106, 0, 0, 0, 0, 622, -129, 0, 0, 0, 0, 715, -131, 0, 0, 0, 0, 801, -126, 0, 0, 0, 0, 877, -131, 0, 0, 0, 0, 980, -129, 0, 0, 0, 0, 1035, -129, 0, 0, 0, 0, 1195, -132, 0, 0, 0, 0, 1270, -132, 0, 0, 0, 0, 1384, -138)
+}
+point_count = 19
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8lr3"]
+atlas = ExtResource("7_ia5vv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34mop"]
+atlas = ExtResource("7_ia5vv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xatjo"]
+atlas = ExtResource("7_ia5vv")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32cb0"]
+atlas = ExtResource("7_ia5vv")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gw4aw"]
+atlas = ExtResource("7_ia5vv")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hexp"]
+atlas = ExtResource("7_ia5vv")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ofg58"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8lr3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34mop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xatjo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_32cb0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gw4aw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hexp")
+}],
+"loop": true,
+"name": &"portalopen",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4vfk6"]
+radius = 36.0139
+
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_pdssv")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 position = Vector2(4745, -941)
@@ -508,7 +571,7 @@ tile_map_data = PackedByteArray("AADT/zUAAAArAAcAAADW/zUAAAArAAcAAADZ/zUAAAArAAc
 tile_set = SubResource("TileSet_ugcgk")
 
 [node name="kitsune" parent="." instance=ExtResource("2_d5c0m")]
-position = Vector2(2718, -615)
+position = Vector2(-143, 496)
 scale = Vector2(0.60808, 0.542571)
 
 [node name="Camera2D" type="Camera2D" parent="kitsune"]
@@ -518,7 +581,7 @@ limit_smoothed = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-1, 0)
-tile_map_data = PackedByteArray("AAACACYAAAABAAcAAAAFACYAAAABAAcAAAAIACYAAAABAAcAAAALACYAAAABAAcAAAAOACYAAAABAAcAAAAVACEAAAAZABUAAAAdAB8AAAAZABUAAAA9ABQAAAAlABQAAACiAAUAAAAZAAcAAAC0AAUAAAAZAAcAAAD2/yQAAAAWAA0AAADrAAAAAAAcABUAAADzAAAAAAAcABUAAAD7AAAAAAAcABUAAAADAQAAAAAcABUAAAALAQAAAAAcABUAAADoAPz/AAA6AAoAAADDAAUAAAAZABUAAAAjABgAAAANAAEAAAAjABsAAAANAAQAAAAmABgAAAAQAAEAAAAmABsAAAAQAAcAAAApABgAAAATAAEAAAApABsAAAAHAAcAAAAsABgAAAAWAAEAAAAsABsAAAAWAAQAAAAvABsAAAAEAAoAAAAyABsAAAAKAAoAAACiAPf/AAAZAAcAAACiAP3/AAAZAAEAAAC0APf/AAAZAAcAAAC0AP3/AAAZAAEAAACiAOn/AAAZAAcAAACiAO//AAAZAAEAAAC0AOn/AAAZAAcAAAC0AO//AAAZAAEAAACiAOD/AAAZAAEAAAC0AOD/AAAZAAEAAADDAP//AAAZABUAAADDAPn/AAAZABUAAACUAPf/AAAZABUAAACUAPH/AAAZABUAAACUAOv/AAAZABUAAADBAOn/AAAZABUAAADBAOP/AAAZABUAAADBAN3/AAAZABUAAADlAAAAAAAZABUAAAARAQAAAAAZABUAAAAOAfz/AAA6AAoAAAA1ABsAAAABAAcAAACeANz/AAAlABQAAACnANz/AAAlABQAAACwANz/AAAlABQAAAC5ANz/AAAlABQAAADuAPr/AAAZABUAAADzAPz/AAAZABUAAAA=")
+tile_map_data = PackedByteArray("AAACACYAAAABAAcAAAAFACYAAAABAAcAAAAIACYAAAABAAcAAAALACYAAAABAAcAAAAOACYAAAABAAcAAAAVACEAAAAZABUAAAAdAB8AAAAZABUAAAA9ABQAAAAlABQAAACiAAUAAAAZAAcAAAC0AAUAAAAZAAcAAAD2/yQAAAAWAA0AAADrAAAAAAAcABUAAADzAAAAAAAcABUAAAD7AAAAAAAcABUAAAADAQAAAAAcABUAAAALAQAAAAAcABUAAADoAPz/AAA6AAoAAADDAAUAAAAZABUAAAAjABgAAAANAAEAAAAjABsAAAANAAQAAAAmABgAAAAQAAEAAAAmABsAAAAQAAcAAAApABgAAAATAAEAAAApABsAAAAHAAcAAAAsABgAAAAWAAEAAAAsABsAAAAWAAQAAAAvABsAAAAEAAoAAAAyABsAAAAKAAoAAACiAPf/AAAZAAcAAACiAP3/AAAZAAEAAAC0APf/AAAZAAcAAAC0AP3/AAAZAAEAAACiAOn/AAAZAAcAAACiAO//AAAZAAEAAAC0AOn/AAAZAAcAAAC0AO//AAAZAAEAAACiAOD/AAAZAAEAAAC0AOD/AAAZAAEAAADDAP//AAAZABUAAADDAPn/AAAZABUAAACUAPf/AAAZABUAAACUAPH/AAAZABUAAACUAOv/AAAZABUAAADBAOn/AAAZABUAAADBAOP/AAAZABUAAADBAN3/AAAZABUAAADlAAAAAAAZABUAAAARAQAAAAAZABUAAAAOAfz/AAA6AAoAAAA1ABsAAAABAAcAAACeANz/AAAlABQAAACnANz/AAAlABQAAACwANz/AAAlABQAAAC5ANz/AAAlABQAAADuAPr/AAAZABUAAADzAPz/AAAZABUAAAA8Ae//AAAuABQAAABFAe//AAAuABQAAAA=")
 tile_set = SubResource("TileSet_x4xoa")
 
 [node name="moving tiles" type="Node" parent="."]
@@ -601,3 +664,47 @@ scale = Vector2(0.129646, 0.124223)
 [node name="Path2D" parent="." instance=ExtResource("6_4q73y")]
 position = Vector2(2406, -621)
 curve = SubResource("Curve2D_7sxls")
+
+[node name="Path2D2" parent="." instance=ExtResource("6_4q73y")]
+position = Vector2(3590, -157)
+curve = SubResource("Curve2D_rpg4c")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(5189, -341)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+position = Vector2(26, 20)
+scale = Vector2(2.625, 2.25)
+sprite_frames = SubResource("SpriteFrames_ofg58")
+animation = &"portalopen"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(34, 19)
+shape = SubResource("CircleShape2D_4vfk6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 2535.0
+offset_top = -666.0
+offset_right = 2665.0
+offset_bottom = -575.0
+theme_override_fonts/font = ExtResource("9_kbons")
+text = "Wait for your ride here"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 3658.0
+offset_top = -165.0
+offset_right = 3790.0
+offset_bottom = -116.0
+theme_override_fonts/font = ExtResource("9_kbons")
+text = "Wait for 
+your ride"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 4839.0
+offset_top = -342.0
+offset_right = 4941.0
+offset_bottom = -319.0
+theme_override_fonts/font = ExtResource("9_kbons")
+text = "JUMP!!!"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
