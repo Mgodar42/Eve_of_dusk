@@ -1,14 +1,15 @@
-[gd_scene load_steps=43 format=4 uid="uid://cbs7cf8txkw47"]
+[gd_scene load_steps=44 format=4 uid="uid://cbs7cf8txkw47"]
 
 [ext_resource type="Script" path="res://Script/level.gd" id="1_pdssv"]
 [ext_resource type="Texture2D" uid="uid://b4qnu5dl5e1ml" path="res://tiles/Nature_environment_01.png" id="1_wo578"]
 [ext_resource type="PackedScene" uid="uid://diuv1tlp1d2ni" path="res://Scene/kitsune.tscn" id="2_d5c0m"]
-[ext_resource type="PackedScene" uid="uid://b8iv6k4pr163t" path="res://Scene/platform.tscn" id="3_c51ea"]
+[ext_resource type="PackedScene" uid="uid://s68yedsdoytk" path="res://Scene/platform.tscn" id="3_c51ea"]
 [ext_resource type="PackedScene" uid="uid://ctblaipr8xlya" path="res://Scene/golem.tscn" id="4_bagg5"]
 [ext_resource type="PackedScene" uid="uid://c8yhdq6j24jm2" path="res://Scene/killzone.tscn" id="4_bhduy"]
 [ext_resource type="PackedScene" uid="uid://mmfoo5rqa7uf" path="res://Scene/path_2d.tscn" id="6_4q73y"]
 [ext_resource type="Texture2D" uid="uid://c5ihktva8jfsk" path="res://Sprites/Dimensional_Portal.png" id="7_ia5vv"]
 [ext_resource type="FontFile" uid="uid://chylhwcjt5pta" path="res://text/PixelOperator8-Bold.ttf" id="9_kbons"]
+[ext_resource type="PackedScene" uid="uid://ret1hknyug6q" path="res://Scene/coin.tscn" id="10_wyds5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bxywu"]
 texture = ExtResource("1_wo578")
@@ -499,7 +500,7 @@ distance = 79.0
 
 [sub_resource type="Curve2D" id="Curve2D_7sxls"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 75, -13, 0, 0, 0, 0, 214, -16, 0, 0, 0, 0, 385, -15, 0, 0, 0, 0, 571, -19, 0, 0, 0, 0, 742, -18, 0, 0, 0, 0, 857, 75, 0, 0, 0, 0, 974, 116, 0, 0, 0, 0, 1069, 134, 0, 0, 0, 0, 1179, 201, 0, 0, 0, 0, 1278, 222, 0, 0, 0, 0, 1405, 263, 0, 0, 0, 0, 1524, 308, 0, 0, 0, 0, 1599, 325, 0, 0, 0, 0, 1660, 336, 0, 0, 0, 0, 1761, 344, 0, 0, 0, 0, 1836, 382, 0, 0, 0, 0, 1900, 406)
+"points": PackedVector2Array(0, 0, 0, 0, 75, -13, 0, 0, 0, 0, 214, -16, 0, 0, 0, 0, 385, -15, 0, 0, 0, 0, 571, -19, 0, 0, 0, 0, 746, -11, 0, 0, 0, 0, 875, 9, 0, 0, 0, 0, 992, 59, 0, 0, 0, 0, 1069, 134, 0, 0, 0, 0, 1179, 201, 0, 0, 0, 0, 1278, 222, 0, 0, 0, 0, 1405, 263, 0, 0, 0, 0, 1524, 308, 0, 0, 0, 0, 1599, 325, 0, 0, 0, 0, 1660, 336, 0, 0, 0, 0, 1761, 344, 0, 0, 0, 0, 1836, 382, 0, 0, 0, 0, 1900, 406)
 }
 point_count = 17
 
@@ -571,7 +572,7 @@ tile_map_data = PackedByteArray("AADT/zUAAAArAAcAAADW/zUAAAArAAcAAADZ/zUAAAArAAc
 tile_set = SubResource("TileSet_ugcgk")
 
 [node name="kitsune" parent="." instance=ExtResource("2_d5c0m")]
-position = Vector2(-143, 496)
+position = Vector2(2380, -179)
 scale = Vector2(0.60808, 0.542571)
 
 [node name="Camera2D" type="Camera2D" parent="kitsune"]
@@ -581,7 +582,7 @@ limit_smoothed = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-1, 0)
-tile_map_data = PackedByteArray("AAACACYAAAABAAcAAAAFACYAAAABAAcAAAAIACYAAAABAAcAAAALACYAAAABAAcAAAAOACYAAAABAAcAAAAVACEAAAAZABUAAAAdAB8AAAAZABUAAAA9ABQAAAAlABQAAACiAAUAAAAZAAcAAAC0AAUAAAAZAAcAAAD2/yQAAAAWAA0AAADrAAAAAAAcABUAAADzAAAAAAAcABUAAAD7AAAAAAAcABUAAAADAQAAAAAcABUAAAALAQAAAAAcABUAAADoAPz/AAA6AAoAAADDAAUAAAAZABUAAAAjABgAAAANAAEAAAAjABsAAAANAAQAAAAmABgAAAAQAAEAAAAmABsAAAAQAAcAAAApABgAAAATAAEAAAApABsAAAAHAAcAAAAsABgAAAAWAAEAAAAsABsAAAAWAAQAAAAvABsAAAAEAAoAAAAyABsAAAAKAAoAAACiAPf/AAAZAAcAAACiAP3/AAAZAAEAAAC0APf/AAAZAAcAAAC0AP3/AAAZAAEAAACiAOn/AAAZAAcAAACiAO//AAAZAAEAAAC0AOn/AAAZAAcAAAC0AO//AAAZAAEAAACiAOD/AAAZAAEAAAC0AOD/AAAZAAEAAADDAP//AAAZABUAAADDAPn/AAAZABUAAACUAPf/AAAZABUAAACUAPH/AAAZABUAAACUAOv/AAAZABUAAADBAOn/AAAZABUAAADBAOP/AAAZABUAAADBAN3/AAAZABUAAADlAAAAAAAZABUAAAARAQAAAAAZABUAAAAOAfz/AAA6AAoAAAA1ABsAAAABAAcAAACeANz/AAAlABQAAACnANz/AAAlABQAAACwANz/AAAlABQAAAC5ANz/AAAlABQAAADuAPr/AAAZABUAAADzAPz/AAAZABUAAAA8Ae//AAAuABQAAABFAe//AAAuABQAAAA=")
+tile_map_data = PackedByteArray("AAACACYAAAABAAcAAAAFACYAAAABAAcAAAAIACYAAAABAAcAAAALACYAAAABAAcAAAAOACYAAAABAAcAAAAVACEAAAAZABUAAAAdAB8AAAAZABUAAAA9ABQAAAAlABQAAACiAAUAAAAZAAcAAAC0AAUAAAAZAAcAAAD2/yQAAAAWAA0AAADrAAAAAAAcABUAAADzAAAAAAAcABUAAAD7AAAAAAAcABUAAAADAQAAAAAcABUAAAALAQAAAAAcABUAAADoAPz/AAA6AAoAAADDAAUAAAAZABUAAAAjABgAAAANAAEAAAAjABsAAAANAAQAAAAmABgAAAAQAAEAAAAmABsAAAAQAAcAAAApABgAAAATAAEAAAApABsAAAAHAAcAAAAsABgAAAAWAAEAAAAsABsAAAAWAAQAAAAvABsAAAAEAAoAAAAyABsAAAAKAAoAAACiAPf/AAAZAAcAAACiAP3/AAAZAAEAAAC0APf/AAAZAAcAAAC0AP3/AAAZAAEAAACiAOn/AAAZAAcAAACiAO//AAAZAAEAAAC0AOn/AAAZAAcAAAC0AO//AAAZAAEAAACiAOD/AAAZAAEAAAC0AOD/AAAZAAEAAADDAPn/AAAZABUAAACUAPf/AAAZABUAAACUAOv/AAAZABUAAADBAOn/AAAZABUAAADBAN3/AAAZABUAAADlAAAAAAAZABUAAAARAQAAAAAZABUAAAAOAfz/AAA6AAoAAAA1ABsAAAABAAcAAACeANz/AAAlABQAAACnANz/AAAlABQAAACwANz/AAAlABQAAAC5ANz/AAAlABQAAADuAPr/AAAZABUAAADzAPz/AAAZABUAAAA8Ae//AAAuABQAAABFAe//AAAuABQAAACTAPH/AAAZABUAAADEAP//AAAZABUAAADDAOP/AAAZABUAAAA=")
 tile_set = SubResource("TileSet_x4xoa")
 
 [node name="moving tiles" type="Node" parent="."]
@@ -706,5 +707,41 @@ offset_right = 4941.0
 offset_bottom = -319.0
 theme_override_fonts/font = ExtResource("9_kbons")
 text = "JUMP!!!"
+
+[node name="coin" parent="." instance=ExtResource("10_wyds5")]
+position = Vector2(60, 557)
+
+[node name="coin2" parent="." instance=ExtResource("10_wyds5")]
+position = Vector2(204, 561)
+
+[node name="coin3" parent="." instance=ExtResource("10_wyds5")]
+position = Vector2(344, 503)
+
+[node name="coin4" parent="." instance=ExtResource("10_wyds5")]
+position = Vector2(470, 460)
+
+[node name="coin5" parent="." instance=ExtResource("10_wyds5")]
+position = Vector2(640, 337)
+
+[node name="coin6" parent="." instance=ExtResource("10_wyds5")]
+position = Vector2(834, 386)
+
+[node name="coin7" parent="." instance=ExtResource("10_wyds5")]
+position = Vector2(978, 290)
+
+[node name="coin8" parent="." instance=ExtResource("10_wyds5")]
+position = Vector2(2743, 48)
+
+[node name="coin9" parent="." instance=ExtResource("10_wyds5")]
+position = Vector2(2744, -178)
+
+[node name="coin10" parent="." instance=ExtResource("10_wyds5")]
+position = Vector2(2749, -411)
+
+[node name="coin11" parent="." instance=ExtResource("10_wyds5")]
+position = Vector2(3896, -23)
+
+[node name="coin12" parent="." instance=ExtResource("10_wyds5")]
+position = Vector2(5061, -308)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

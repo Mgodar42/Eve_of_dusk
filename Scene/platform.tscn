@@ -1,17 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8iv6k4pr163t"]
+[gd_scene load_steps=3 format=3 uid="uid://s68yedsdoytk"]
 
 [ext_resource type="Texture2D" uid="uid://d08gsphjw5ep4" path="res://tiles/tile107.png" id="1_nl4t3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cmi5y"]
-size = Vector2(48, 13)
+size = Vector2(64, 18.5)
 
 [node name="platform" type="AnimatableBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -0.5)
-scale = Vector2(1, 1.02083)
+scale = Vector2(1.33333, 1.375)
 texture = ExtResource("1_nl4t3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 17.5)
+position = Vector2(0, 23.75)
 shape = SubResource("RectangleShape2D_cmi5y")
